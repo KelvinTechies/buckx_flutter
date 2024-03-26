@@ -1,3 +1,4 @@
+import 'package:buckx/Screens/Onboarding/screen_five.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -36,7 +37,7 @@ class _ScreenFourState extends State<ScreenFour> {
                             context,
                             MaterialPageRoute(
                               builder: (context) =>
-                                  ScreenFour(), // Navigate to ScreenTwo
+                                  ScreenFive(), // Navigate to ScreenTwo
                             ),
                           );
                         },
@@ -67,7 +68,7 @@ class _ScreenFourState extends State<ScreenFour> {
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
-                      color: Colors.black,
+                      color: Colors.grey,
                     ),
                     width: 15,
                     height: 5,
@@ -76,7 +77,7 @@ class _ScreenFourState extends State<ScreenFour> {
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
-                      color: Colors.grey,
+                      color: Colors.black,
                     ),
                     width: 15,
                     height: 5,
@@ -93,7 +94,7 @@ class _ScreenFourState extends State<ScreenFour> {
                           Text(
                             "Built Securely  ",
                             style: TextStyle(
-                              fontFamily: "Clash Grotesk",
+                              fontFamily: "ClashGrotesk",
                               fontWeight: FontWeight.w600,
                               fontSize: 36,
                             ),
@@ -102,7 +103,7 @@ class _ScreenFourState extends State<ScreenFour> {
                           Text(
                             " on Solana",
                             style: TextStyle(
-                              fontFamily: "Clash Grotesk",
+                              fontFamily: "ClashGrotesk",
                               fontWeight: FontWeight.w600,
                               fontSize: 36,
                             ),
@@ -122,7 +123,7 @@ class _ScreenFourState extends State<ScreenFour> {
                                     "A secure, super simple USDC wallet. You don’t even have to care that it is built with crypto technology under the hood 🔐",
                                     style: TextStyle(
                                       fontSize: 18,
-                                      fontFamily: "Clash Grotesk",
+                                      fontFamily: "ClashGrotesk",
                                       color: Color(0XFF2A2A2A),
                                       fontWeight: FontWeight.w400,
                                     ),

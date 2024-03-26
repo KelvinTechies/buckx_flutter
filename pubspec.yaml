@@ -34,6 +34,10 @@ dependencies:
     sdk: flutter
   flutter_svg: ^2.0.10+1
 
+  google_sign_in: ^5.4.2
+  firebase_auth: ^4.2.0
+
+  firebase_core: ^2.4.0
 dev_dependencies:
   animated_splash_screen: null
   # The "flutter_lints" package below contains a set of recommended lints to

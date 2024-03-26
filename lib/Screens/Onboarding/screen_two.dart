@@ -94,7 +94,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                           Text(
                             "Share Payments Socially",
                             style: TextStyle(
-                              fontFamily: "Clash Grotesk",
+                              fontFamily: "ClashGrotesk",
                               fontWeight: FontWeight.w600,
                               fontSize: 36,
                             ),
@@ -115,7 +115,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                     "Connect with your contacts and share payments socially. Add fun notes and emojis to your transactions 🥰 🤝",
                                     style: TextStyle(
                                       fontSize: 18,
-                                      fontFamily: "Clash Grotesk",
+                                      fontFamily: "ClashGrotesk",
                                       color: Color(0XFF2A2A2A),
                                       fontWeight: FontWeight.w400,
                                     ),

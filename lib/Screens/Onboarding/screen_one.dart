@@ -94,7 +94,7 @@ class _ScreenOneState extends State<ScreenOne> {
                           Text(
                             "No More ",
                             style: TextStyle(
-                              fontFamily: "Clash Grotesk",
+                              fontFamily: "ClashGrotesk",
                               fontWeight: FontWeight.w600,
                               fontSize: 36,
                             ),
@@ -102,7 +102,7 @@ class _ScreenOneState extends State<ScreenOne> {
                           Text(
                             "Wallet Address",
                             style: TextStyle(
-                              fontFamily: "Clash Grotesk",
+                              fontFamily: "ClashGrotesk",
                               fontWeight: FontWeight.w600,
                               fontSize: 36,
                             ),
@@ -122,7 +122,7 @@ class _ScreenOneState extends State<ScreenOne> {
                                     "Send and receive dollars instantly to anyone in the world, 24/7, with just an email address & phone number 💃 🕺",
                                     style: TextStyle(
                                       fontSize: 18,
-                                      fontFamily: "Clash Grotesk",
+                                      fontFamily: "ClashGrotesk",
                                       color: Color(0XFF2A2A2A),
                                       fontWeight: FontWeight.w400,
                                     ),

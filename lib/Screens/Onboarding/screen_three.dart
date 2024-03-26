@@ -95,7 +95,7 @@ class _ScreenThreeState extends State<ScreenThree> {
                           Text(
                             "Works with your ",
                             style: TextStyle(
-                              fontFamily: "Clash Grotesk",
+                              fontFamily: "ClashGrotesk",
                               fontWeight: FontWeight.w600,
                               fontSize: 36,
                             ),
@@ -104,7 +104,7 @@ class _ScreenThreeState extends State<ScreenThree> {
                           Text(
                             " Naira Card",
                             style: TextStyle(
-                              fontFamily: "Clash Grotesk",
+                              fontFamily: "ClashGrotesk",
                               fontWeight: FontWeight.w600,
                               fontSize: 36,
                             ),
@@ -124,7 +124,7 @@ class _ScreenThreeState extends State<ScreenThree> {
                                     "Buy dollars with your local Naira card and bank account or get paid in stablecoin directly on Bucx 🇳🇬 💸",
                                     style: TextStyle(
                                       fontSize: 18,
-                                      fontFamily: "Clash Grotesk",
+                                      fontFamily: "ClashGrotesk",
                                       color: Color(0XFF2A2A2A),
                                       fontWeight: FontWeight.w400,
                                     ),
