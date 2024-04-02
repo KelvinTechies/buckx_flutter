@@ -34,10 +34,10 @@ class _ScreenFiveState extends State<ScreenFive> {
                 child: ElevatedButton(
                   onPressed: () {
                     // Navigate to backup screen when "Get Started" button is pressed
-                    Navigator.push(
+                    /* Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => BackUpWallet()),
-                    );
+                    ); */
                   },
                   child: Text(
                     textAlign: TextAlign.center,
