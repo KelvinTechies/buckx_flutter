@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "943594747653",
+    "project_id": "buckx-4cce4",
+    "storage_bucket": "buckx-4cce4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943594747653:android:77fc0fe5a5573012d4696c",
+        "android_client_info": {
+          "package_name": "Buckx.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "943594747653-gffpia76uf0lccrq5bhj1sili17amai3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9wi1b8GhWL6JfM9z-WesGbWZr3D-i5wM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "943594747653-gffpia76uf0lccrq5bhj1sili17amai3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "943594747653-jhc1eo1bf0pa8i2uq4ji9sgl69j8917a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "buckx"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

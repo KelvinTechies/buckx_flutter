@@ -92,6 +92,7 @@ class _ScreenOneState extends State<ScreenOne> {
                       child: Column(
                         children: [
                           Text(
+                             textAlign: TextAlign.center,
                             "No More ",
                             style: TextStyle(
                               fontFamily: "ClashGrotesk",
@@ -100,6 +101,7 @@ class _ScreenOneState extends State<ScreenOne> {
                             ),
                           ),
                           Text(
+                             textAlign: TextAlign.center,
                             "Wallet Address",
                             style: TextStyle(
                               fontFamily: "ClashGrotesk",

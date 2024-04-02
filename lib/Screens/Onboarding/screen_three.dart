@@ -99,7 +99,7 @@ class _ScreenThreeState extends State<ScreenThree> {
                               fontWeight: FontWeight.w600,
                               fontSize: 36,
                             ),
-                            textAlign: TextAlign.justify,
+                            textAlign: TextAlign.center,
                           ),
                           Text(
                             " Naira Card",
@@ -108,7 +108,7 @@ class _ScreenThreeState extends State<ScreenThree> {
                               fontWeight: FontWeight.w600,
                               fontSize: 36,
                             ),
-                            textAlign: TextAlign.justify,
+                           textAlign: TextAlign.center,
                           ),
                           SizedBox(
                             height: 10,
