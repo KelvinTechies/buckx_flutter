@@ -31,21 +31,12 @@ class _ScreenFiveState extends State<ScreenFive> {
                   color: Color(0X0FFEEE0FF),
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
-                child: ElevatedButton(
-                  onPressed: () {
-                    // Navigate to backup screen when "Get Started" button is pressed
-                    /* Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => BackUpWallet()),
-                    ); */
-                  },
-                  child: Text(
-                    textAlign: TextAlign.center,
-                    "Get Started",
-                    style: TextStyle(
-                      fontFamily: "ClashGrotesk",
-                      color: Color(0X0FF563380),
-                    ),
+                child: Text(
+                  textAlign: TextAlign.center,
+                  "Get Started",
+                  style: TextStyle(
+                    fontFamily: "ClashGrotesk",
+                    color: Color(0X0FF563380),
                   ),
                 ),
               ),
@@ -111,7 +102,8 @@ class _ScreenFiveState extends State<ScreenFive> {
                           backgroundColor:
                               MaterialStateProperty.all(Colors.white),
                         ),
-                        onPressed: _loading ? null : _signInWithGoogle,
+                        // onPressed: _loading ? null : _signInWithGoogle,
+                        onPressed: null,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
