@@ -268,6 +268,498 @@ class _BackUpWalletState extends State<BackUpWallet> {
     );
   }
 
+  _requestFunds() {
+    showModalBottomSheet(
+        isScrollControlled: true,
+        context: context,
+        builder: (BuildContext context) {
+          return SingleChildScrollView(
+              child: Container(
+            padding: EdgeInsets.all(10),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                        child: Row(children: [
+                      Text("🤑"),
+                      SizedBox(width: 15),
+                      Text(
+                        "Request Funds",
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontFamily: "ClashGrotesk",
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ])),
+                    TextButton(
+                      onPressed: Navigator.of(context).pop,
+                      child: FaIcon(FontAwesomeIcons.close),
+                    ),
+                  ],
+                ),
+                Container(
+                  width: 320,
+                  child: TextField(
+                    textAlign: TextAlign.center,
+                    // style:
+                    decoration: InputDecoration(
+                      prefixText: "From: ",
+                      suffixIcon: TextButton(
+                        onPressed: _requestViaEmail,
+                        child: Image.asset("assets/images/Plain.png"),
+                      ),
+                      prefixStyle: TextStyle(
+                          fontFamily: "ClashGrotesk",
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
+                      hintText: "Email or Wallet address",
+                      hintStyle: TextStyle(
+                          fontFamily: "ClashGrotesk",
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(100),
+                        borderSide: BorderSide(
+                            style: BorderStyle.solid,
+                            color: Colors.black,
+                            width: 1),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 35),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      textAlign: TextAlign.start,
+                      "Recent Recipients",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: "ClashGrotesk",
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 15),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        width: 70,
+                        height: 92,
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          border: Border.all(style: BorderStyle.solid),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                                width: 50,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                  "assets/images/Frame_4.png",
+                                )))),
+                            Text("Seun"),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        width: 70,
+                        height: 92,
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          border: Border.all(style: BorderStyle.solid),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                                width: 50,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                  "assets/images/Frame_5.png",
+                                )))),
+                            Text("Jack"),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        width: 70,
+                        height: 92,
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          border: Border.all(style: BorderStyle.solid),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                                width: 50,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                  "assets/images/Frame_4.png",
+                                )))),
+                            Text("Osas"),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        width: 70,
+                        height: 92,
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          border: Border.all(style: BorderStyle.solid),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                                width: 50,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                  "assets/images/Frame_6.png",
+                                )))),
+                            Text("Alfred"),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        width: 70,
+                        height: 92,
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          border: Border.all(style: BorderStyle.solid),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                                width: 50,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                  "assets/images/Frame_4.png",
+                                )))),
+                            Text("Lola"),
+                          ],
+                        ),
+                      ),
+                    ]),
+                SizedBox(height: 30),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Recent Transactions",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontFamily: "ClashGrotesk",
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black,
+                        ),
+                      ),
+                      Text(
+                        "See all",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontFamily: "ClashGrotesk",
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black,
+                        ),
+                      )
+                    ]),
+                SizedBox(height: 15),
+                Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(14),
+                        border: Border.all(
+                            style: BorderStyle.solid,
+                            width: 1,
+                            color: Colors.black)),
+                    child: Column(children: [
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                                child: Row(children: [
+                              Image.asset(
+                                "assets/images/withdrawal.png",
+                              ),
+                              SizedBox(width: 15),
+                              Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Seun Bayo",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontFamily: "ClashGrotesk",
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Text(
+                                      "14:16, Mar 24, 2024",
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontFamily: "ClashGrotesk",
+                                        fontWeight: FontWeight.w400,
+                                        color: Color(0X0FF888888),
+                                      ),
+                                    )
+                                  ])
+                            ])),
+                            Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Text(
+                                    "-\$24",
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontFamily: "ClashGrotesk",
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0X0ffD4321C),
+                                    ),
+                                  ),
+                                  Text(
+                                    "NGN 33,650",
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontFamily: "ClashGrotesk",
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0X0ff888888),
+                                    ),
+                                  )
+                                ])
+                          ]),
+                    ])),
+                SizedBox(height: 15),
+                Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(14),
+                        border: Border.all(
+                            style: BorderStyle.solid,
+                            width: 1,
+                            color: Colors.black)),
+                    child: Column(children: [
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                                child: Row(children: [
+                              Image.asset(
+                                "assets/images/withdrawal_2.png",
+                              ),
+                              SizedBox(width: 15),
+                              Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Withdrawal",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontFamily: "ClashGrotesk",
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Text(
+                                      "14:16, Mar 24, 2024",
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontFamily: "ClashGrotesk",
+                                        fontWeight: FontWeight.w400,
+                                        color: Color(0X0FF888888),
+                                      ),
+                                    )
+                                  ])
+                            ])),
+                            Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Text(
+                                    "-\$54",
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontFamily: "ClashGrotesk",
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0X0ff8E55D4),
+                                    ),
+                                  ),
+                                  Text(
+                                    "NGN 33,650",
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontFamily: "ClashGrotesk",
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0X0ff888888),
+                                    ),
+                                  )
+                                ])
+                          ])
+                    ])),
+                SizedBox(height: 15),
+                Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(14),
+                        border: Border.all(
+                            style: BorderStyle.solid,
+                            width: 1,
+                            color: Colors.black)),
+                    child: Column(children: [
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                                child: Row(children: [
+                              Image.asset(
+                                "assets/images/from.png",
+                              ),
+                              SizedBox(width: 15),
+                              Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "From Mahmudul Ha...",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontFamily: "ClashGrotesk",
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Text(
+                                      "14:16, Mar 24, 2024",
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontFamily: "ClashGrotesk",
+                                        fontWeight: FontWeight.w400,
+                                        color: Color(0X0FF888888),
+                                      ),
+                                    )
+                                  ])
+                            ])),
+                            Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Text(
+                                    "+\$24",
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontFamily: "ClashGrotesk",
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0X0ff0DA163),
+                                    ),
+                                  ),
+                                  Text(
+                                    "NGN 33,650",
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontFamily: "ClashGrotesk",
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0X0ff888888),
+                                    ),
+                                  )
+                                ])
+                          ])
+                    ])),
+                SizedBox(height: 15),
+                Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(14),
+                        border: Border.all(
+                            style: BorderStyle.solid,
+                            width: 1,
+                            color: Colors.black)),
+                    child: Column(children: [
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                                child: Row(children: [
+                              Image.asset(
+                                "assets/images/topUp.png",
+                              ),
+                              SizedBox(width: 15),
+                              Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Top-Up",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontFamily: "ClashGrotesk",
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Text(
+                                      "14:16, Mar 24, 2024",
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontFamily: "ClashGrotesk",
+                                        fontWeight: FontWeight.w400,
+                                        color: Color(0X0FF888888),
+                                      ),
+                                    )
+                                  ])
+                            ])),
+                            Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Text(
+                                    "+\$424",
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontFamily: "ClashGrotesk",
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0X0ff0DA163),
+                                    ),
+                                  ),
+                                  Text(
+                                    "NGN 33,650",
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontFamily: "ClashGrotesk",
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0X0ff888888),
+                                    ),
+                                  )
+                                ])
+                          ])
+                    ])),
+                SizedBox(height: 25),
+              ],
+            ),
+          ));
+        });
+  }
+
   _requestButton() {
     // Future.delayed(Duration(milliseconds: 1500));
     showModalBottomSheet(
@@ -2717,7 +3209,7 @@ class _BackUpWalletState extends State<BackUpWallet> {
                     decoration: InputDecoration(
                       prefixText: "To :",
                       suffixIcon: TextButton(
-                        onPressed: _sendViaEmail,
+                        onPressed: _sendViaAddress,
                         child: Image.asset("assets/images/Plain.png"),
                       ),
                       prefixStyle: TextStyle(
@@ -2740,16 +3232,22 @@ class _BackUpWalletState extends State<BackUpWallet> {
                   ),
                 ),
                 SizedBox(height: 35),
-                Text(
-                  textAlign: TextAlign.start,
-                  "Recent Recipients",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontFamily: "ClashGrotesk",
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black,
-                  ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      textAlign: TextAlign.start,
+                      "Recent Recipients",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: "ClashGrotesk",
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
                 ),
+                SizedBox(height: 20),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -3217,8 +3715,136 @@ class _BackUpWalletState extends State<BackUpWallet> {
                   ),
                   SizedBox(height: 25),
                   Container(
-                      width: 30,
-                      height: 30,
+                      width: 60,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            "assets/images/sender.png",
+                          ),
+                          fit: BoxFit.cover,
+                        ),
+                      )),
+                  SizedBox(height: 15),
+                  Text(
+                    "Osas Kelvin",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: "ClashGrotesk",
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black,
+                    ),
+                  ),
+                  Text(
+                    "odusoviasuyi@gmail.com",
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontFamily: "ClashGrotesk",
+                      fontWeight: FontWeight.w400,
+                      color: Color(0X0FF3a3a3a),
+                    ),
+                  ),
+                  SizedBox(height: 45),
+                  Text(
+                    "\$345",
+                    style: TextStyle(
+                      fontSize: 50,
+                      fontFamily: "ClashGrotesk",
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black,
+                    ),
+                  ),
+                  SizedBox(height: 35),
+                  TextField(
+                    textAlign: TextAlign.center,
+                    // style:
+                    decoration: InputDecoration(
+                      hintText: "What’s this for? (optional) 🙃",
+                      hintStyle: TextStyle(
+                          fontFamily: "ClashGrotesk",
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(100),
+                        borderSide: BorderSide(
+                            style: BorderStyle.solid,
+                            color: Color(0X0FFDDDDDD),
+                            width: 1),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        });
+  }
+
+  _requestViaEmail() {
+    Navigator.of(context).pop();
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            actions: [
+              Container(
+                width: 356,
+                height: 56,
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Color(0x0FF000000),
+                        width: 1,
+                        style: BorderStyle.solid),
+                    borderRadius: BorderRadius.circular(100)),
+                child: ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(
+                      Color(0x0FF14F195),
+                    )),
+                    onPressed: () {
+                      // Navigator.of(context).pop();
+                      _requestProcessing();
+                    },
+                    child: Text(
+                      "Send \$345",
+                      style: TextStyle(
+                          fontFamily: "ClashGrotesk",
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: Color(0X0FF000000)),
+                    )),
+              ),
+            ],
+            title: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                          child: Row(children: [
+                        Text("🤑"),
+                        Text(
+                          "Request Funds",
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontFamily: "ClashGrotesk",
+                            fontWeight: FontWeight.w500,
+                            color: Color(0X0FF171717),
+                          ),
+                        ),
+                      ])),
+                      TextButton(
+                        onPressed: Navigator.of(context).pop,
+                        child: FaIcon(FontAwesomeIcons.close),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 25),
+                  Container(
+                      width: 60,
+                      height: 60,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage(
@@ -3361,8 +3987,8 @@ class _BackUpWalletState extends State<BackUpWallet> {
                   ),
                   SizedBox(height: 25),
                   Container(
-                      width: 30,
-                      height: 30,
+                      width: 60,
+                      height: 60,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage(
@@ -3388,6 +4014,124 @@ class _BackUpWalletState extends State<BackUpWallet> {
                       fontFamily: "ClashGrotesk",
                       fontWeight: FontWeight.w400,
                       color: Color(0X0FF3a3a3a),
+                    ),
+                  ),
+                  SizedBox(height: 45),
+                  Text(
+                    "A magical link is on its way via email, granting them the power to pay you with Bucx.",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontFamily: "ClashGrotesk",
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black,
+                    ),
+                  ),
+                  SizedBox(height: 35),
+                ],
+              ),
+            ),
+          );
+        });
+  }
+
+  _verifyViaWallet() {
+    Navigator.of(context).pop();
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            actions: [
+              Container(
+                width: 356,
+                height: 56,
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Color(0x0FF000000),
+                        width: 1,
+                        style: BorderStyle.solid),
+                    borderRadius: BorderRadius.circular(100)),
+                child: ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(
+                      Color(0x0FF14F195),
+                    )),
+                    onPressed: () {
+                      // Navigator.of(context).pop();
+                      _processing();
+                    },
+                    child: Text(
+                      "Confrim",
+                      style: TextStyle(
+                          fontFamily: "ClashGrotesk",
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: Color(0X0FF000000)),
+                    )),
+              ),
+              SizedBox(height: 20),
+              Container(
+                width: 356,
+                height: 56,
+                decoration: BoxDecoration(
+                    color: Color(0x0FF14F195),
+                    border: Border.all(
+                        color: Color(0x0FF000000),
+                        width: 1,
+                        style: BorderStyle.solid),
+                    borderRadius: BorderRadius.circular(100)),
+                child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Text(
+                      "Cancel",
+                      style: TextStyle(
+                          fontFamily: "ClashGrotesk",
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: Color(0X0FF5F5F5F)),
+                    )),
+              )
+            ],
+            title: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                          child: Row(children: [
+                        Image.asset("assets/images/💸.png"),
+                        SizedBox(width: 15),
+                        Text("Send Funds"),
+                      ])),
+                      TextButton(
+                        onPressed: Navigator.of(context).pop,
+                        child: FaIcon(FontAwesomeIcons.close),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 25),
+                  Container(
+                      width: 60,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            "assets/images/wallet.png",
+                          ),
+                          fit: BoxFit.cover,
+                        ),
+                      )),
+                  SizedBox(height: 15),
+                  Text(
+                    "4zMMC9srt5Ri5X14GAg...",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: "ClashGrotesk",
+                      fontWeight: FontWeight.w500,
+                      color: Color(0X0FF171717),
                     ),
                   ),
                   SizedBox(height: 45),
@@ -3487,7 +4231,368 @@ class _BackUpWalletState extends State<BackUpWallet> {
         });
   }
 
-  _sent_success() {
+  _requestProcessing() {
+    Navigator.of(context).pop();
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            actions: [
+              Container(
+                width: 356,
+                height: 56,
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Color(0x0FF000000),
+                        width: 1,
+                        style: BorderStyle.solid),
+                    borderRadius: BorderRadius.circular(100)),
+                child: ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(
+                      Color(0x0FF14F195),
+                    )),
+                    onPressed: () {
+                      // Navigator.of(context).pop();
+                      /*   _sent_success(
+                          "Request Sent",
+                          "assets/images/smiley_dollar.png",
+                          "Money's on the move! Crypto-fueled and sent their way! 🚀💸"); */
+                    },
+                    child: Text(
+                      "Processing...",
+                      style: TextStyle(
+                          fontFamily: "ClashGrotesk",
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: Color(0X0FF000000)),
+                    )),
+              ),
+            ],
+            title: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(height: 25),
+                  Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            "assets/images/launching.png",
+                          ),
+                          fit: BoxFit.cover,
+                        ),
+                      )),
+                  SizedBox(height: 15),
+                  Text(
+                    "Hold Tight",
+                    style: TextStyle(
+                      fontSize: 26,
+                      fontFamily: "ClashGrotesk",
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black,
+                    ),
+                  ),
+                  SizedBox(height: 45),
+                  Text(
+                    "Sending your digital dollars on a joyride through the crypto cosmos. Fasten your seatbelts; it's a wild, playful journey! 🚀💸",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontFamily: "ClashGrotesk",
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black,
+                    ),
+                  ),
+                  SizedBox(height: 35),
+                ],
+              ),
+            ),
+          );
+        });
+  }
+
+  _scanWallet() {
+    Navigator.of(context).pop();
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            actions: [
+              Container(
+                width: 356,
+                height: 56,
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Color(0x0FF000000),
+                        width: 1,
+                        style: BorderStyle.solid),
+                    borderRadius: BorderRadius.circular(100)),
+                child: ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(
+                      Color(0x0FF14F195),
+                    )),
+                    onPressed: () {
+                      // Navigator.of(context).pop();
+                      _verifyViaWallet();
+                    },
+                    child: Text(
+                      "Send \$345",
+                      style: TextStyle(
+                          fontFamily: "ClashGrotesk",
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: Color(0X0FF000000)),
+                    )),
+              ),
+            ],
+            title: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                          child: Row(children: [
+                        Text(
+                          "Scan QR Code",
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontFamily: "ClashGrotesk",
+                            fontWeight: FontWeight.w500,
+                            color: Color(0X0FF171717),
+                          ),
+                        ),
+                      ])),
+                      TextButton(
+                        onPressed: Navigator.of(context).pop,
+                        child: FaIcon(FontAwesomeIcons.close),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 35),
+                  Container(
+                    width: 300,
+                    height: 300,
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                            color: Color(0x0FF000000),
+                            width: 1,
+                            style: BorderStyle.solid),
+                        borderRadius: BorderRadius.circular(20)),
+                  ),
+                  Container(
+                    width: 143,
+                    height: 31,
+                    child: Text(
+                      "Scan QR code of a wallet address",
+                      style: TextStyle(
+                          fontFamily: "ClashGrotesk",
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400),
+                      textAlign: TextAlign.center,
+                      // style:
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        });
+  }
+
+  _sent_success(String head, String image, String desc) {
+    Navigator.of(context).pop();
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            actions: [
+              Container(
+                width: 356,
+                height: 56,
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Color(0x0FF000000),
+                        width: 1,
+                        style: BorderStyle.solid),
+                    borderRadius: BorderRadius.circular(100)),
+                child: ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(
+                      Color(0x0FF14F195),
+                    )),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Text(
+                      "Close ✌️",
+                      style: TextStyle(
+                          fontFamily: "ClashGrotesk",
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: Color(0X0FF000000)),
+                    )),
+              ),
+            ],
+            title: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(height: 25),
+                  Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(image),
+                          fit: BoxFit.cover,
+                        ),
+                      )),
+                  SizedBox(height: 15),
+                  Text(
+                    head,
+                    style: TextStyle(
+                      fontSize: 26,
+                      fontFamily: "ClashGrotesk",
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black,
+                    ),
+                  ),
+                  SizedBox(height: 45),
+                  Text(
+                    desc,
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontFamily: "ClashGrotesk",
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black,
+                    ),
+                  ),
+                  SizedBox(height: 35),
+                ],
+              ),
+            ),
+          );
+        });
+  }
+
+  _sendViaAddress() {
+    Navigator.of(context).pop();
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            actions: [
+              Container(
+                width: 356,
+                height: 56,
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Color(0x0FF000000),
+                        width: 1,
+                        style: BorderStyle.solid),
+                    borderRadius: BorderRadius.circular(100)),
+                child: ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(
+                      Color(0x0FF14F195),
+                    )),
+                    onPressed: () {
+                      // Navigator.of(context).pop();
+                      _verifyViaWallet();
+                    },
+                    child: Text(
+                      "Send \$345",
+                      style: TextStyle(
+                          fontFamily: "ClashGrotesk",
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: Color(0X0FF000000)),
+                    )),
+              ),
+            ],
+            title: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                          child: Row(children: [
+                        Image.asset("assets/images/💸.png"),
+                        SizedBox(width: 15),
+                        Text("Send Funds"),
+                      ])),
+                      TextButton(
+                        onPressed: Navigator.of(context).pop,
+                        child: FaIcon(FontAwesomeIcons.close),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 25),
+                  Container(
+                      width: 60,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            "assets/images/wallet.png",
+                          ),
+                          fit: BoxFit.cover,
+                        ),
+                      )),
+                  SizedBox(height: 15),
+                  Text(
+                    "4zMMC9srt5Ri5X14GAg...",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: "ClashGrotesk",
+                      fontWeight: FontWeight.w500,
+                      color: Color(0X0FF171717),
+                    ),
+                  ),
+                  SizedBox(height: 45),
+                  Text(
+                    "\$345",
+                    style: TextStyle(
+                      fontSize: 50,
+                      fontFamily: "ClashGrotesk",
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black,
+                    ),
+                  ),
+                  SizedBox(height: 35),
+                  TextField(
+                    textAlign: TextAlign.center,
+                    // style:
+                    decoration: InputDecoration(
+                      hintText: "What’s this for? (optional) 🙃",
+                      hintStyle: TextStyle(
+                          fontFamily: "ClashGrotesk",
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(100),
+                        borderSide: BorderSide(
+                            style: BorderStyle.solid,
+                            color: Color(0X0FFDDDDDD),
+                            width: 1),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        });
+  }
+
+  _insufficientBalabce() {
     Navigator.of(context).pop();
     showDialog(
         context: context,
@@ -3567,8 +4672,6 @@ class _BackUpWalletState extends State<BackUpWallet> {
         });
   }
 
-  _insufficientBalabce() {}
-
   @override
   Widget build(BuildContext context) {
     // Placeholder widget for the actual content
@@ -3590,7 +4693,7 @@ class _BackUpWalletState extends State<BackUpWallet> {
                     color: Color(0X0FF14F195),
                   ),
                   child: ElevatedButton(
-                      onPressed: _requestButton,
+                      onPressed: _requestFunds,
                       child: Row(
                         children: [
                           Image.asset("assets/images/money_smile.png"),
